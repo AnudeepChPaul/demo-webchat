@@ -5,9 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <script src="https://media.twiliocdn.com/sdk/js/webchat-v3/releases/1.0.0/webchat.min.js"></script>
   </head>
   <body>
     <div id="root"></div>
+    <div id="twilio-webchat-widget-root"></div>
+    <script>
+      window.addEventListener("load", () => {
+          const appConfig = {
+   deploymentKey: "CVd7df9c8a9791b15330bcf42d7809b076"
+}
+Twilio.initWebchat(appConfig);
+      })
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
